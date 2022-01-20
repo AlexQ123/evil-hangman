@@ -85,13 +85,8 @@ public class EvilHangman {
             System.out.print("Enter guess: ");
             Scanner scanner = new Scanner(System.in);
             userInput = scanner.nextLine();
-            // if the user enters more than one character, reject
-            while (userInput.length() != 1) {
-                System.out.println("Invalid input! Enter guess: ");
-                userInput = scanner.nextLine();
-            }
-            // if the character is not an upper or lower case letter, reject
-            while (!Character.isLetter(userInput.charAt(0)) || Character.isWhitespace(userInput.charAt(0))) {
+            // if the user doesn't enter exactly one character that is a letter, reject
+            while (userInput.length() != 1 || !Character.isLetter(userInput.charAt(0))) {
                 System.out.print("Invalid input! Enter guess: ");
                 userInput = scanner.nextLine();
             }
@@ -102,7 +97,8 @@ public class EvilHangman {
                 possibleWords = game.makeGuess(guess);
             }
             catch (GuessAlreadyMadeException e) {
-                System.err.println("Oops! You already guessed that letter!");
+                System.err.println("Oops, you already guessed that letter!");
+                numGuesses++;
             }
 
             // now that you have the possible words remaining, if the words don't have the user's guess
