@@ -17,7 +17,7 @@ The “Evil” Algorithm
 1. Begin with the set of English words, B, read in from the indicated input file.
 2. Assuming the user inputs a length l, Create a subset of words, L, such that every word in B of length l is in L and L ⊆ S.
 3. Each time the user guesses a letter:
-  a. Partition the word list into "word groups" based on the positions of the guessed letter in the words.
+  1. Partition the word list into "word groups" based on the positions of the guessed letter in the words.
     - For example, let the current word list be [ALLY, BEST, COOL, DEAL, ECHO, ELSE, FLEW, GOOD, HEAL, HOPE, LAZY]. Assume the player guesses the letter “E.” The program partitions the word list into the following six word families:
       1.       E---         contains ECHO.
       2.       -E--         contains BEST, DEAL, HEAL.
@@ -25,7 +25,7 @@ The “Evil” Algorithm
       4.       ---E         contains HOPE.
       5.       E--E         contains ELSE.
       6.       ----         contains ALLY, COOL, GOOD, LAZY.
-  b. Choose the largest of these word groups to replace L.
+  2. Choose the largest of these word groups to replace L.
   - In the example above, the largest word group is of the form ----.
   - If two or more of the groups are of the same size, choose the one to return according to the following priorities:
     1. Choose the group in which the letter does not appear at all.
