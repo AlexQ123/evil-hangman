@@ -26,9 +26,9 @@ The “Evil” Algorithm
       5.       E--E         contains ELSE.
       6.       ----         contains ALLY, COOL, GOOD, LAZY.
   b. Choose the largest of these word groups to replace L.
-    - In the example above, the largest word group is of the form ----.
-    - If two or more of the groups are of the same size, choose the one to return according to the following priorities:
-      1. Choose the group in which the letter does not appear at all.
-      2. If each group has the guessed letter, choose the one with the fewest letters.
-      3. If this still has not resolved the issue, choose the one with the rightmost guessed letter (e.g. given the patterns E--E and -E-E, the second group would be chosen)
-      4. If there is still more than one group, choose the one with the next rightmost letter. Repeat this step (step 4) until a group is chosen.
+  - In the example above, the largest word group is of the form ----.
+  - If two or more of the groups are of the same size, choose the one to return according to the following priorities:
+    1. Choose the group in which the letter does not appear at all.
+    2. If each group has the guessed letter, choose the one with the fewest letters.
+    3. If this still has not resolved the issue, choose the one with the rightmost guessed letter (e.g. given the patterns E--E and -E-E, the second group would be chosen)
+    4. If there is still more than one group, choose the one with the next rightmost letter. Repeat this step (step 4) until a group is chosen.
